@@ -1,21 +1,14 @@
-/**
+/*
  * 左侧的 markdown 看起来并不美观。
  *
  * 我们稍作修饰。
  */
 
 #work-container {
-  max-height: 94.5%;
-}
-
-#work-container.flipped {
-  -webkit-transform: rotateX(0deg) rotateY(190deg) rotateZ(180deg);
-}
-
-#work-container .md {
-  -webkit-transform: rotateY(190deg) rotateZ(180deg);
-  margin-top: 1200px;
-}
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+} 
 
 /**
  * 下面就是见证奇迹的时刻：
@@ -28,5 +21,4 @@
  * 骗你啦，啥也没有~
  *
  * 好吧，其实是有的，来了。
- *
  */

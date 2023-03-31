@@ -39,6 +39,6 @@ export async function readChar(
     const char = content.slice(index, index + charsPerInterval)
     onChange(char)
     index += charsPerInterval
-    await new Promise(resolve => setTimeout(resolve, 10))
+    await new Promise(resolve => setTimeout(resolve, 1))
   }
 }

@@ -15,6 +15,7 @@ const styleText = [ style0, style1, style2 ]
 const styleTagElement = document.getElementById('style-tag') as HTMLStyleElement
 
 const StyleContainer = forwardRef((props, ref) => {
+  const container = useRef<HTMLPreElement>(null)
   const styleBuffer = useRef<string>('')
   const [content, setContent] = useState<string>('')
   const update = (char: string) => {
@@ -23,6 +24,9 @@ const StyleContainer = forwardRef((props, ref) => {
     if (char === ';') {
       styleTagElement.textContent += styleBuffer.current
       styleBuffer.current = ''
+    }
+    if(container.current) {
+      container.current.scrollTop = container.current.scrollHeight
     }
   }
 
@@ -33,7 +37,7 @@ const StyleContainer = forwardRef((props, ref) => {
   }))
 
   return (
-    <pre id="style-container" dangerouslySetInnerHTML={{ __html: content }} ></pre>
+    <pre ref={container} id="style-container" dangerouslySetInnerHTML={{ __html: content }} ></pre>
   )
 })
 

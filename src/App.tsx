@@ -21,10 +21,10 @@ function App() {
     start()
   }, [])
   return (
-    <div className="App">
+    <>
       <WorkContainer ref={workRef}/>
       <StyleContainer ref={styleRef} />
-    </div>
+    </>
   );
 }
 
