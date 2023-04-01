@@ -5,10 +5,11 @@
  */
 
 #work-container {
-  max-height: 100%;
   position: absolute;
+  left: 0;
   top: 0;
-} 
+  max-height: 100%;
+}
 
 /**
  * 下面就是见证奇迹的时刻：

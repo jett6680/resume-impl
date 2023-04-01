@@ -37,11 +37,6 @@ html, body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
 }
 
 /***
@@ -64,7 +59,7 @@ pre:not(:empty) {
   overflow: auto;
   background: rgb(48, 48, 48);
   border: 1px solid #ccc;
-  max-height: 44.6%;
+  max-height: 50%;
   width: 50%;
   font-size: 14px;
   font-family: monospace;
@@ -79,9 +74,10 @@ pre:not(:empty) {
  */
 
 #style-container{
-  transform: translateX(95%);
   position: absolute;
+  left: 0;
   top: 0;
+  transform: translateX(95%);
 }
 
 /**
@@ -117,8 +113,12 @@ body {
 * 太紧凑了，让我们弄一点边距出来
 */
 
-#root {
+body {
   padding: 20px;
+}
+
+#root {
+  position: relative;
 }
 
 /**
@@ -131,4 +131,3 @@ pre:not(#style-container) {
   transform: rotateY(10deg);
   transform-origin: left;
 }
-
