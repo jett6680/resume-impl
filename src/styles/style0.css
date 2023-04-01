@@ -45,6 +45,7 @@ html, body {
 
 pre, a {
   color: white;
+  width: 100%;
 }
 
 /**
@@ -127,7 +128,41 @@ body {
  * 我相信你应该不是来只看我炫技的吧？
  */
 
-pre:not(#style-container) {
+ #work-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
   transform: rotateY(10deg);
   transform-origin: left;
+  width: 50%;
+ }
+
+ #work-container {
+  width: 100%;
 }
+
+pre:not(:empty) {
+  max-height: 100%;
+}
+
+#work-wrap {
+  height: 100%;
+  transform: rotateY(10deg);
+ }
+
+ #work-wrap .text {
+  position: absolute;
+  z-index: 4;
+ }
+
+ #work-wrap .text,  #work-wrap .md {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+ }
+
+ #work-wrap .md {
+  transform: rotateX(180deg);
+ }
+

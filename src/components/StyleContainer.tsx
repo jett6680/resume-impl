@@ -37,7 +37,7 @@ const StyleContainer = forwardRef((props, ref) => {
   }))
 
   return (
-    <pre ref={container} id="style-container" dangerouslySetInnerHTML={{ __html: content }} ></pre>
+    <pre id="style-container" ref={container}  dangerouslySetInnerHTML={{ __html: content }} ></pre>
   )
 })
 
