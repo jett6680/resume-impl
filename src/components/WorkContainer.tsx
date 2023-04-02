@@ -9,7 +9,7 @@ const mdContent = Markdown.parse(work)
 const WorkContainer = forwardRef((props, ref) => {
   const container = useRef<HTMLPreElement>(null)
   const [content, setContent] = useState<string>('')
-  const [showContaier, setShowContaier] = useState<boolean>(false)
+  const [showContainer, setShowContainer] = useState<boolean>(false)
   const [isFinish, setIsFinish] = useState<boolean>(false)
 
   const update = (char: string) => {
@@ -20,14 +20,14 @@ const WorkContainer = forwardRef((props, ref) => {
   }
   useImperativeHandle(ref, () => ({
     write: async (stepIndex: number) => {
-      setShowContaier(true)
+      setShowContainer(true)
       await scheduler.readChar(work, 0, 1, update)
     },
     preview: () => {
       setIsFinish(true)
     }
   }))
-  if (!showContaier) {
+  if (!showContainer) {
     return <></>
   }
   return (
