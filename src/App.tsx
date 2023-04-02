@@ -1,9 +1,10 @@
 import React, { useRef, useEffect } from 'react';
 import StyleContainer from "./components/StyleContainer";
 import WorkContainer from "./components/WorkContainer";
+import Footer from "./components/Footer";
 
 interface StyleRef {
-  write: (stepIndex: number) => void 
+  write: (stepIndex: number) => void
 }
 
 interface WorkRef extends StyleRef {
@@ -25,10 +26,12 @@ function App() {
   useEffect(() => {
     start()
   }, [])
+
   return (
     <>
       <WorkContainer ref={workRef}/>
       <StyleContainer ref={styleRef} />
+      <Footer />
     </>
   );
 }

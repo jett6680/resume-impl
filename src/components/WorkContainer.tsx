@@ -1,6 +1,6 @@
 import { forwardRef, useImperativeHandle, useState, useRef } from 'react'
 import Markdown from 'markdown'
-import { readChar } from '../shared/utils'
+import { scheduler } from '../shared/utils'
 // @ts-ignore
 // eslint-disable-next-line
 import work from '!!raw-loader!../styles/work.css';
@@ -21,7 +21,7 @@ const WorkContainer = forwardRef((props, ref) => {
   useImperativeHandle(ref, () => ({
     write: async (stepIndex: number) => {
       setShowContaier(true)
-      await readChar(work, 0, 1, update)
+      await scheduler.readChar(work, 0, 1, update)
     },
     preview: () => {
       setIsFinish(true)

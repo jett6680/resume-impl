@@ -29,16 +29,34 @@ export function handleChar(fullText: string, char: string): string {
   return fullText
 }
 
-export async function readChar(
-  content: string, 
-  index: number, 
-  charsPerInterval: number, 
-  onChange: (char: string) => void
-) {
-  while(index < content.length) {
-    const char = content.slice(index, index + charsPerInterval)
-    onChange(char)
-    index += charsPerInterval
-    await new Promise(resolve => setTimeout(resolve, 0))
+class Scheduler {
+  status: 'stopping' | 'running'
+
+  constructor() {
+    this.status = 'running'
+  }
+
+  async readChar (
+      content: string,
+      index: number,
+      charsPerInterval: number,
+      onChange: (char: string) => void
+  ) {
+    while(index < content.length) {
+      const char = content.slice(index, index + charsPerInterval)
+      // 暂停状态需要在这里阻塞
+      while (this.status === 'stopping') {
+        await new Promise(resolve => setTimeout(resolve, 30))
+      }
+      onChange(char)
+      index += charsPerInterval
+      await new Promise(resolve => setTimeout(resolve, 0))
+    }
+  }
+
+  setStatus(status: 'stopping' | 'running') {
+    this.status = status
   }
 }
+
+export const scheduler = new Scheduler()

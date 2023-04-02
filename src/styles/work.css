@@ -1,59 +1,85 @@
-- 从输入URL到显示页面，经过了哪些流程
-- react hook组件和class组件有啥区别  为什么现在的趋势都是hooks组件
-- react 15升级16为啥像 will_mount的声明周期会被删掉 这么做的原因是啥
-- 浏览器缓存
+# 求职简历 - 前端工程师
 
-1.webpack 打包的流程是怎么样的 
-2.webpack 的是怎么解决循环依赖的问题
-3.webpack是怎么把模块全部找出来的（我说了通过ast）
-4.高版本浏览器的特性，低版本不支持需要poilly，原理是啥？babel的poilly和webpack的是一样吗？有什么区别（没怎么答对）
-5. 说一下需要打补丁的js的语法？装饰器是怎么实现的？
-6.AST是什么，import的AST结构大概是啥样的，你自己玩过ast吗 
-7.npm yarn pnpm 了解吗？有啥区别？
-8.pnpm的包是通过软连接还是硬链接？软连接和硬链接有啥区别？
-9.使用pnpm的话,node_modules里面的.pnpm文件夹里存放的是啥？（我好像答错了 不太记得了 pnpm用的比较少）
-10.静态语言如java， 跟js相比，为什么他们需要编译，js不需要？
-11.我说了了js的执行原理，接着问,字节码是什么？字节码和二进制码一样吗？
-12.你平时都是怎么学习的
+## 秋风/男/xxxx.xx
 
-1.react的PureComponent 做了什么事？
-2.封装组件，传递一个jsx的props，怎么校验合法性, 那我传一个数字6能通过校验吗？
-3. Class组件的一些声明周期在Hook组件里面分别是怎么对应的？
-4. useEffect和useLayoutEffect有什么区别
-5. useCallback和useMemo有什么区别，使用场景是什么？
-6. useMemo和React.memo的区别又是啥？
-7. useRef的使用场景
-8. 两个useEffect，都返回了卸载函数，并且都依赖了一个对象，对象有一个属性，这个属性被修改的时候，这两个useEffect的卸载函数的执行情况是怎么样的
-9. 让你实现一个useUnMount的卸载的hooks,你怎么实现
+xxxxx/信息与计算科学
+
+本科/xxxx年毕业/党员
+
+## 介绍
+
+于xxxx年开始接触前端，喜欢编码，有Geek精神，对代码有洁癖，喜欢接触前沿技术，爱折腾。
+
+获得x、xxxx竞赛奖项xx项，(包含xxxxxxx多媒体竞赛一等奖1项)。
+
+主持参与省、国家级项目xx项；发表论文xxx篇，其中x篇EI索引。
+
+## 工作
+
+### 杭州xx网络有限公司 （2018.3-2018.7）
+`工程化` `基建搭建`
+
+前端架构组
+
+- 前端错误监控系统(基建)(负责人) 接入量pv:3000w
+  - web端js-sdk开发,无侵入式接入,压缩后仅2kb。
+  - 收集端Node开发,分布式存储日志。
+  - 阿里云日志服务分析,以及常用的数据分析。
+  - echart搭建可视化平台。
+- 前端性能监控系统(负责人) 接入pv: 1000w
+  - web端js-sdk开发,支持自定义上报以及自动上报,无侵入式。
+  - 收集端Node开发,Elasticsearch集群存储日志。
+  - Elasticsearch的Node模块开发，封装按时间维度的查询聚合模块。
+  - 可视化平台,利用redis缓存优化查询,淘汰算法共同协作。
+- 落地页截图(Node项目)
+  - 利用puppeteer开发截图。
+  - 利用clustor多线程开发,速度从原来60分钟提高至8分钟，提高约7倍（300张截图）。
+  - 开发自定义队列模式,避免Node端丢失请求。
+- webpack插件(webpack-plugin-inner-script)地址
+  - 自动将外链形式改写成内敛形式。
+- 内网准入系统
+  - 采用TypeScript+ES6/7+React开发
+  - 基本多层级树形结构的黑名单/白名单控制组件
+- xxxxxxxxxx
+  - xxxxxxxx
+  - xxxxxxxx
+  - xxxxxxxx
+  
 
 
-querySelectorAll 和 getElementsByClassName 区别
-浏览器绘制的过程,布局计算是哪个阶段
-如何跨域传递cookie
-什么是跨域
-== 和 === 区别
-js 类型有哪些
-什么是this
-怎么实现bind
-es6继承和es5区别
-什么是函数柯里化
-object.definedProperty和proxy区别
-writable 和configable区别,什么是否可逆
-react fiber架构了解,fiber结点有什么属性
-如何判断class组件和函数组件 Component.isReactComponent
-如何理解hook
-useEffect和useLayoutEffect区别
-状态管理用哪个, redux和mobx原理
-使用context注意哪些问题
-class的setState和hook setState区别
-react 有什么局限性(缺点)
-react框架本身做了哪些安全操作 (xss)
-如何避免csrf攻击(token,cookie同源,crossOrign samesite)
-webpack5 更新了什么功能,
-如何实现webpack插件
-tapable原理
-contenthash和chunkhash 区别,
-https的过程,
-s指的是什么
+## 项目
 
-Promsie实现一下
+### 实时聊天项目(webchat)
+`Vue2.0` `Websocket` `Node.JS` `MongoDB`
+负责前端构建,服务器架构,后端开发
+  
+- 经历过3次重构，注重性能优化与体验,在2.0版本，打开首页速度提高1倍。
+- 采用了ES6/ES7的语法，采用axios请求统一处理
+- 基于localStorage的缓存组件开发，可以设置有效时长，适用于Webapp
+- 开发Loading，Alert，Confirm等组件
+- 拥有日志系统以及消息的RSA算法加密
+- 基于redis的请求监控，过滤恶意请求
+
+
+## 技能
+### Web基础
+
+- 熟练掌握HTML5/CSS3,响应式布局和移动端开发
+- 了解ES6/ES7,Webpack
+- 有Antd Design,Element UI,Muse UI搭建项目经验
+- 了解Hybrid开发以及Electron桌面开发,liunx服务器搭建经验,Nginx配置
+- Mac开发用户，熟悉Git进行团队协作，对PS有一定基础
+
+### 前端框架
+- Vue开发过大型的应用,了解Vue原理与技术栈
+- React以及React相关技术栈
+
+### 后端相关
+- 开发Node监控平台中间件
+- 了解常用的Node模块
+- 小型Node框架的搭建
+
+### 数据库
+- MongoDB
+- Redis
+

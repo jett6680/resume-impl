@@ -1,5 +1,5 @@
 import { useState, useRef, useImperativeHandle, forwardRef } from 'react'
-import { handleChar, readChar } from '../shared/utils'
+import { handleChar, scheduler } from '../shared/utils'
 // @ts-ignore
 // eslint-disable-next-line
 import style0 from '!!raw-loader!../styles/style0.css';
@@ -32,7 +32,7 @@ const StyleContainer = forwardRef((props, ref) => {
 
   useImperativeHandle(ref, () => ({
     write: async (stepIndex: number) => {
-      await readChar(styleText[stepIndex], 0, 1, update)
+      await scheduler.readChar(styleText[stepIndex], 0, 1, update)
     }
   }))
 
